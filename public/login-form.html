@@ -1,0 +1,36 @@
+<HTML>
+        <HEAD>
+            <TITLE>
+                Form Validation
+            </TITLE>
+        <script type="text/javascript" src="utils.js" > </script>
+  
+        </HEAD>
+        <BODY>
+            <h1>
+                Validation Form
+            </h1>
+            <form action='/validate' method="POST">
+                
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" placeholder="Enter name" required/>
+                <p id="name-text"></p>
+
+                <label for="dob">Date of Birth: </label>
+                <input type="date" name="dob" id="dob" required/>
+                <p id="dob-text"></p>
+
+                <label for="email">Email:</label>
+                <input type="text" id="email" name="email" placeholder="Enter name" required/>
+                <p id="email-text"></p>
+
+                <label for="pnum">Phone Number:</label>
+                <input type="text" id="pnum" name="pnum" placeholder="Enter name" required/>
+                <p id="pnum-text"></p>
+
+                <input type="submit" value="Validate" onclick="validate()" />
+            </form>
+
+        </BODY>
+
+</HTML>

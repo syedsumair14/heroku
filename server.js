@@ -13,7 +13,6 @@ app.use((req, res, next)=>{
     next();
 });
 
-// you might want to remove this line if you decide to introduce login with sessions
 app.use(express.static(__dirname + '/public'));
 
 
@@ -25,24 +24,22 @@ app.get('/user-form', (req, res) => {
     res.sendFile(__dirname + '/public/login-form.html');
 });
 
+app.get('/success', (req, res) => {
+    res.sendFile(__dirname + '/public/success.html')
+});
+
 app.post('/login', (req, res) => {
     // console.log(req.body);
     if(req.body.uname == "admin" && req.body.passwd == "Root@123")
-    //this is a sample login interface, insert session creation here if you implement that
         res.redirect('/user-form');
     else
-        res.redirect('/'); 
+        res.redirect('/success'); 
 });
 
 app.post('/validate', (req, res) => {
-    //insert if statements here validating phone number abd redirect accordingly.
-    //you might want to repopulate the already entered values in case of invalis phone number
-    //view engines like hbs can be used to transfer data to web pages dynamically
-    //yahin p kaam hai thoda
     console.log(req.body);
 
-    //redirect to confirmation page instead of home page
-    res.redirect('/');
+    res.redirect('/success');
 });
 
 

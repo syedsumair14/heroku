@@ -1,0 +1,18 @@
+h1 {
+	box-shadow: 0 0 4px rgba(100, 150, 130, 1);
+	text-align: center;
+	margin-top: 200px;
+}
+
+hr {
+	border-top: 1px solid #f8f8f8
+	border-bottom: 1px solid rgba(0,0,0,0.2);
+}
+
+p {
+	text-align: center;
+}
+
+html {
+	background: linear-gradient(to right, #c6ffdd, #fbd786, #f7797d);
+}

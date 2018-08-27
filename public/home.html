@@ -1,24 +1,29 @@
 <HTML>
         <HEAD>
+            <link rel="stylesheet" type="text/css" href="home.css">
             <TITLE>
                 Home Page
             </TITLE>
             
         </HEAD>
         <BODY>
+            <div id="log">
             <h1>
-                Home Page
+                <span>LOGIN<span>
             </h1>
             <form action='/login' method='post'>
+            <div class="space">
                 <label for="uname">Username:</label>
                 <input type="text" id="uname" name="uname" placeholder="Enter user name" required />
-
-                <label for="passwd">Password:</label>
+            </div>
+            <div class="space">
+                <label for="passwd">Password: </label>
                 <input type="password" id="passwd" name="passwd" placeholder="Enter password" required/>
-
+            </div>
 
                 <input type="submit" value="Login" />
-
+            </div>
+        
             </form>
         </BODY>
 

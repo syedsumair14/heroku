@@ -1,0 +1,42 @@
+BODY {
+	text-align: center;
+	background: linear-gradient(to right, #c6ffdd, #fbd786, #f7797d);
+}
+
+.space {
+	letter-spacing: 1px;
+	margin-bottom: 10px;
+	display: inline-block;
+	width: 360px;
+}
+
+#log {
+	box-shadow: 0 0 4px rgba(0, 0, 0, 0.8);
+	padding: 0;
+	width: 360px;
+	margin: auto;
+	text-align: center;
+}
+
+span {
+	letter-spacing: 2px;
+	font-family: cursive;
+	margin-bottom: 0;
+}
+
+input:focus{
+	background: white;
+	border: 3px solid #2980e9;
+	outline: none;
+}
+
+ input {
+ 	font-size: 18px;
+ 	background: #f7f7f7;
+ 	width: 100%;
+ 	padding: 13px 13px 13px 20px;
+ 	box-sizing: border-box;
+ 	color: #2980e9;
+ 	border: 3px solid rgba(0, 0, 0, 0);
+ 	margin-top: 0;
+ }

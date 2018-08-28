@@ -33,7 +33,7 @@ app.post('/login', (req, res) => {
     if(req.body.uname == "admin" && req.body.passwd == "Root@123")
         res.redirect('/user-form');
     else
-        res.redirect('/success'); 
+        res.redirect('/'); 
 });
 
 app.post('/validate', (req, res) => {

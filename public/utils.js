@@ -6,9 +6,9 @@ function validate(){
     {
         displayError("name-text", "Please enter a valid name.");
     }
-    // if(!validAge(dob)){
-    //     displayError("dob-text", "Age should be greather than 18." + Date(dob));
-    // }
+    if(!validAge(dob)){
+         displayError("dob-text", "Age should be greather than 18." + Date(dob));
+     }
     if(!validEmail(email))
     {
         displayError("email-text", "Please enter a valid email");
@@ -23,19 +23,21 @@ function displayError(feildName, errMessage){
 }
 function validName(name){
     document.getElementById("name-text").innerHTML = "";
-    if(name.length <=2 )
+    if(name.length <= 2 )
         return false;
     else 
         return true;
 }
-function validAge(dob){
-    //not working search for alternative method online
-    // document.getElementById("dob-text").innerHTML = "";
-    // var myDob = new Date(dob);
-    // var ageDifMs = Date.now() - MyDOb.getTime();
-    // var ageDate = new Date(ageDifMs); // miliseconds from epoch
-    // var age =  Math.abs(ageDate.getUTCFullYear() - 1970);
-    return true;   
+  function validateDOB(dob) {
+    var today = new Date();
+    var birthDate = new Date(dob);
+    var age = today.getFullYear() - birthDate.getFullYear();
+    var m = today.getMonth() - birthDate.getMonth();
+    if (m < 0 || (m === 0 && today.getDate() < birthDate.getDate())) {
+        return true;
+    } else {
+    return false;
+            }          
 }
 
 function validEmail(email){

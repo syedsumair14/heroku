@@ -1,5 +1,7 @@
 const express = require('express');
 const bodyParser = require('body-parser')
+const dbCont = require('./lib/db/dbcontroller');
+
 const port = process.env.PORT || 3000;
 var app = express();
 
@@ -38,6 +40,7 @@ app.post('/login', (req, res) => {
 
 app.post('/validate', (req, res) => {
     console.log(req.body);
+    dbCont.dbPush(req.body);
 
     res.redirect('/success');
 });
